@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AC929A7E0B6003CF83B /* GenTreeApp.swift */; };
+		87331ACE29A7E0B7003CF83B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87331ACD29A7E0B7003CF83B /* Assets.xcassets */; };
+		87331AD129A7E0B7003CF83B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87331AD029A7E0B7003CF83B /* Preview Assets.xcassets */; };
+		87331AD929A7E109003CF83B /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AD829A7E109003CF83B /* TreeView.swift */; };
+		87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331ADB29A7E131003CF83B /* Font + Extension.swift */; };
+		87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331ADD29A7E139003CF83B /* Color + Extension.swift */; };
+		87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331ADF29A7E144003CF83B /* Image + Extension.swift */; };
+		87331AE429A7E33C003CF83B /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87331AE129A7E33C003CF83B /* Montserrat-Regular.ttf */; };
+		87331AE529A7E33C003CF83B /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87331AE229A7E33C003CF83B /* Montserrat-Medium.ttf */; };
+		87331AE629A7E33C003CF83B /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87331AE329A7E33C003CF83B /* Montserrat-SemiBold.ttf */; };
+		87331AE829A7E344003CF83B /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87331AE729A7E344003CF83B /* Montserrat-Bold.ttf */; };
+		87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEA29A7E385003CF83B /* FamilyView.swift */; };
+		87331AED29A7E398003CF83B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEC29A7E398003CF83B /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		87331AC629A7E0B6003CF83B /* GenTree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenTree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87331AC929A7E0B6003CF83B /* GenTreeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenTreeApp.swift; sourceTree = "<group>"; };
+		87331ACD29A7E0B7003CF83B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87331AD029A7E0B7003CF83B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87331AD729A7E0E2003CF83B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		87331AD829A7E109003CF83B /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
+		87331ADB29A7E131003CF83B /* Font + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font + Extension.swift"; sourceTree = "<group>"; };
+		87331ADD29A7E139003CF83B /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		87331ADF29A7E144003CF83B /* Image + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image + Extension.swift"; sourceTree = "<group>"; };
+		87331AE129A7E33C003CF83B /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		87331AE229A7E33C003CF83B /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		87331AE329A7E33C003CF83B /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		87331AE729A7E344003CF83B /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		87331AEA29A7E385003CF83B /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
+		87331AEC29A7E398003CF83B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87331AC329A7E0B6003CF83B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87331ABD29A7E0B6003CF83B = {
+			isa = PBXGroup;
+			children = (
+				87331AC829A7E0B6003CF83B /* GenTree */,
+				87331AC729A7E0B6003CF83B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87331AC729A7E0B6003CF83B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87331AC629A7E0B6003CF83B /* GenTree.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87331AC829A7E0B6003CF83B /* GenTree */ = {
+			isa = PBXGroup;
+			children = (
+				87331AD729A7E0E2003CF83B /* Info.plist */,
+				87331AC929A7E0B6003CF83B /* GenTreeApp.swift */,
+				87331AEE29A7E3A0003CF83B /* Views */,
+				87331ADA29A7E11E003CF83B /* Extension */,
+				87331AE929A7E359003CF83B /* Supporting files */,
+				87331ACF29A7E0B7003CF83B /* Preview Content */,
+			);
+			path = GenTree;
+			sourceTree = "<group>";
+		};
+		87331ACF29A7E0B7003CF83B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87331AD029A7E0B7003CF83B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87331ADA29A7E11E003CF83B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				87331ADD29A7E139003CF83B /* Color + Extension.swift */,
+				87331ADB29A7E131003CF83B /* Font + Extension.swift */,
+				87331ADF29A7E144003CF83B /* Image + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		87331AE929A7E359003CF83B /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				87331ACD29A7E0B7003CF83B /* Assets.xcassets */,
+				87331AE229A7E33C003CF83B /* Montserrat-Medium.ttf */,
+				87331AE129A7E33C003CF83B /* Montserrat-Regular.ttf */,
+				87331AE729A7E344003CF83B /* Montserrat-Bold.ttf */,
+				87331AE329A7E33C003CF83B /* Montserrat-SemiBold.ttf */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		87331AEE29A7E3A0003CF83B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				87331AD829A7E109003CF83B /* TreeView.swift */,
+				87331AEA29A7E385003CF83B /* FamilyView.swift */,
+				87331AEC29A7E398003CF83B /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87331AC529A7E0B6003CF83B /* GenTree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87331AD429A7E0B7003CF83B /* Build configuration list for PBXNativeTarget "GenTree" */;
+			buildPhases = (
+				87331AC229A7E0B6003CF83B /* Sources */,
+				87331AC329A7E0B6003CF83B /* Frameworks */,
+				87331AC429A7E0B6003CF83B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GenTree;
+			productName = GenTree;
+			productReference = 87331AC629A7E0B6003CF83B /* GenTree.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87331ABE29A7E0B6003CF83B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					87331AC529A7E0B6003CF83B = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 87331AC129A7E0B6003CF83B /* Build configuration list for PBXProject "GenTree" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87331ABD29A7E0B6003CF83B;
+			productRefGroup = 87331AC729A7E0B6003CF83B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87331AC529A7E0B6003CF83B /* GenTree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87331AC429A7E0B6003CF83B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87331AE429A7E33C003CF83B /* Montserrat-Regular.ttf in Resources */,
+				87331AD129A7E0B7003CF83B /* Preview Assets.xcassets in Resources */,
+				87331AE829A7E344003CF83B /* Montserrat-Bold.ttf in Resources */,
+				87331AE529A7E33C003CF83B /* Montserrat-Medium.ttf in Resources */,
+				87331ACE29A7E0B7003CF83B /* Assets.xcassets in Resources */,
+				87331AE629A7E33C003CF83B /* Montserrat-SemiBold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87331AC229A7E0B6003CF83B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87331AED29A7E398003CF83B /* SettingsView.swift in Sources */,
+				87331AD929A7E109003CF83B /* TreeView.swift in Sources */,
+				87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */,
+				87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */,
+				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
+				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
+				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		87331AD229A7E0B7003CF83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87331AD329A7E0B7003CF83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87331AD529A7E0B7003CF83B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GenTree/Preview Content\"";
+				DEVELOPMENT_TEAM = R367V6SP7Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GenTree/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novembrz.GenTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87331AD629A7E0B7003CF83B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GenTree/Preview Content\"";
+				DEVELOPMENT_TEAM = R367V6SP7Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GenTree/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.novembrz.GenTree;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87331AC129A7E0B6003CF83B /* Build configuration list for PBXProject "GenTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87331AD229A7E0B7003CF83B /* Debug */,
+				87331AD329A7E0B7003CF83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87331AD429A7E0B7003CF83B /* Build configuration list for PBXNativeTarget "GenTree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87331AD529A7E0B7003CF83B /* Debug */,
+				87331AD629A7E0B7003CF83B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87331ABE29A7E0B6003CF83B /* Project object */;
+}
