@@ -20,6 +20,9 @@
 		87331AE829A7E344003CF83B /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87331AE729A7E344003CF83B /* Montserrat-Bold.ttf */; };
 		87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEA29A7E385003CF83B /* FamilyView.swift */; };
 		87331AED29A7E398003CF83B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEC29A7E398003CF83B /* SettingsView.swift */; };
+		87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEF29A7E556003CF83B /* CustomTabBar.swift */; };
+		87331AF229A7E7F3003CF83B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF129A7E7F3003CF83B /* MainView.swift */; };
+		87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF329A7E808003CF83B /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		87331AE729A7E344003CF83B /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		87331AEA29A7E385003CF83B /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		87331AEC29A7E398003CF83B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		87331AEF29A7E556003CF83B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		87331AF129A7E7F3003CF83B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		87331AF329A7E808003CF83B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +79,7 @@
 				87331AD729A7E0E2003CF83B /* Info.plist */,
 				87331AC929A7E0B6003CF83B /* GenTreeApp.swift */,
 				87331AEE29A7E3A0003CF83B /* Views */,
-				87331ADA29A7E11E003CF83B /* Extension */,
+				87331ADA29A7E11E003CF83B /* Extensions */,
 				87331AE929A7E359003CF83B /* Supporting files */,
 				87331ACF29A7E0B7003CF83B /* Preview Content */,
 			);
@@ -88,14 +94,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		87331ADA29A7E11E003CF83B /* Extension */ = {
+		87331ADA29A7E11E003CF83B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				87331ADD29A7E139003CF83B /* Color + Extension.swift */,
 				87331ADB29A7E131003CF83B /* Font + Extension.swift */,
 				87331ADF29A7E144003CF83B /* Image + Extension.swift */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		87331AE929A7E359003CF83B /* Supporting files */ = {
@@ -113,11 +119,22 @@
 		87331AEE29A7E3A0003CF83B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				87331AF529A7EA84003CF83B /* Main */,
 				87331AD829A7E109003CF83B /* TreeView.swift */,
 				87331AEA29A7E385003CF83B /* FamilyView.swift */,
 				87331AEC29A7E398003CF83B /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		87331AF529A7EA84003CF83B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				87331AF129A7E7F3003CF83B /* MainView.swift */,
+				87331AF329A7E808003CF83B /* MainViewModel.swift */,
+				87331AEF29A7E556003CF83B /* CustomTabBar.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				87331AED29A7E398003CF83B /* SettingsView.swift in Sources */,
+				87331AF229A7E7F3003CF83B /* MainView.swift in Sources */,
 				87331AD929A7E109003CF83B /* TreeView.swift in Sources */,
 				87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */,
 				87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */,
+				87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */,
+				87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */,
 				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
 				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
 				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,

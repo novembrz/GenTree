@@ -11,7 +11,7 @@ import SwiftUI
 struct GenTreeApp: App {
     var body: some Scene {
         WindowGroup {
-            TreeView()
+            MainView()
         }
     }
 }

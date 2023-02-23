@@ -9,10 +9,12 @@ import SwiftUI
 
 struct TreeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello, World!")
             .font(.medium(40))
     }
 }
+
+//MARK: - Previews
 
 struct TreeView_Previews: PreviewProvider {
     static var previews: some View {
