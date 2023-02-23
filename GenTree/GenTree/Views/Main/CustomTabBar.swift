@@ -49,7 +49,7 @@ struct CustomTabBar: View {
 
 //MARK: - Previews
 
-extension CGFloat {
+private extension CGFloat {
     static let cornerRadius: CGFloat = 10
     static let scaleTabEffect: CGFloat = 1.25
     static let scaleEffect: CGFloat = 1.0
@@ -57,7 +57,7 @@ extension CGFloat {
     static let horizontal: CGFloat = 30
 }
 
-extension Double {
+private extension Double {
     static let duration: CGFloat = 0.1
 }
 

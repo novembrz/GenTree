@@ -23,6 +23,10 @@
 		87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEF29A7E556003CF83B /* CustomTabBar.swift */; };
 		87331AF229A7E7F3003CF83B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF129A7E7F3003CF83B /* MainView.swift */; };
 		87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF329A7E808003CF83B /* MainViewModel.swift */; };
+		87331AF829A7ED60003CF83B /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF729A7ED60003CF83B /* FamilyViewModel.swift */; };
+		87331AFA29A7EE08003CF83B /* FamilyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF929A7EE08003CF83B /* FamilyCardView.swift */; };
+		87331AFD29A7EE4D003CF83B /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFC29A7EE4D003CF83B /* PersonModel.swift */; };
+		87331AFF29A7F886003CF83B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFE29A7F886003CF83B /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		87331AEF29A7E556003CF83B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		87331AF129A7E7F3003CF83B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		87331AF329A7E808003CF83B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		87331AF729A7ED60003CF83B /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
+		87331AF929A7EE08003CF83B /* FamilyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyCardView.swift; sourceTree = "<group>"; };
+		87331AFC29A7EE4D003CF83B /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		87331AFE29A7F886003CF83B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			children = (
 				87331AD729A7E0E2003CF83B /* Info.plist */,
 				87331AC929A7E0B6003CF83B /* GenTreeApp.swift */,
+				87331AFB29A7EE30003CF83B /* Models */,
 				87331AEE29A7E3A0003CF83B /* Views */,
 				87331ADA29A7E11E003CF83B /* Extensions */,
 				87331AE929A7E359003CF83B /* Supporting files */,
@@ -100,6 +109,7 @@
 				87331ADD29A7E139003CF83B /* Color + Extension.swift */,
 				87331ADB29A7E131003CF83B /* Font + Extension.swift */,
 				87331ADF29A7E144003CF83B /* Image + Extension.swift */,
+				87331AFE29A7F886003CF83B /* Constant.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,7 +131,7 @@
 			children = (
 				87331AF529A7EA84003CF83B /* Main */,
 				87331AD829A7E109003CF83B /* TreeView.swift */,
-				87331AEA29A7E385003CF83B /* FamilyView.swift */,
+				87331AF629A7ED54003CF83B /* Family */,
 				87331AEC29A7E398003CF83B /* SettingsView.swift */,
 			);
 			path = Views;
@@ -135,6 +145,24 @@
 				87331AEF29A7E556003CF83B /* CustomTabBar.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		87331AF629A7ED54003CF83B /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				87331AEA29A7E385003CF83B /* FamilyView.swift */,
+				87331AF729A7ED60003CF83B /* FamilyViewModel.swift */,
+				87331AF929A7EE08003CF83B /* FamilyCardView.swift */,
+			);
+			path = Family;
+			sourceTree = "<group>";
+		};
+		87331AFB29A7EE30003CF83B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				87331AFC29A7EE4D003CF83B /* PersonModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,13 +239,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87331AFD29A7EE4D003CF83B /* PersonModel.swift in Sources */,
 				87331AED29A7E398003CF83B /* SettingsView.swift in Sources */,
 				87331AF229A7E7F3003CF83B /* MainView.swift in Sources */,
+				87331AFA29A7EE08003CF83B /* FamilyCardView.swift in Sources */,
 				87331AD929A7E109003CF83B /* TreeView.swift in Sources */,
 				87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */,
 				87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */,
+				87331AFF29A7F886003CF83B /* Constant.swift in Sources */,
 				87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */,
 				87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */,
+				87331AF829A7ED60003CF83B /* FamilyViewModel.swift in Sources */,
 				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
 				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
 				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,

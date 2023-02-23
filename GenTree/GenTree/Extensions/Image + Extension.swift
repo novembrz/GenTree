@@ -28,4 +28,8 @@ extension Image {
     static func settings() -> Image {
         return Image("Settings")
     }
+    
+    static func liner() -> Image {
+        return Image("Liner")
+    }
 }
