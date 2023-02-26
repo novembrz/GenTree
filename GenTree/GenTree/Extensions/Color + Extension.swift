@@ -25,11 +25,15 @@ extension Color {
         return Color("TextColor")
     }
     
+    static func secondText() -> Color {
+        return Color("SecondTextColor")
+    }
+    
     static func line() -> Color {
         return Color("LineColor")
     }
     
     static func dangerous() -> Color {
-        return Color("DangerousColor")
+        return Color("DangerouseColor")
     }
 }

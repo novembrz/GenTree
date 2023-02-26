@@ -9,8 +9,36 @@ import SwiftUI
 
 extension Image {
     
+    static func family() -> Image {
+        return Image("Family")
+    }
+    
+    static func filter() -> Image {
+        return Image("Filter")
+    }
+    
     static func genTreeLogo() -> Image {
         return Image("GenTreeLogo")
+    }
+    
+    static func liner() -> Image {
+        return Image("Liner")
+    }
+    
+    static func logOut() -> Image {
+        return Image("LogOut")
+    }
+    
+    static func pen() -> Image {
+        return Image("Pen")
+    }
+    
+    static func search() -> Image {
+        return Image("Search")
+    }
+    
+    static func settings() -> Image {
+        return Image("Settings")
     }
     
     static func treeLogo() -> Image {
@@ -21,15 +49,11 @@ extension Image {
         return Image("Tree")
     }
     
-    static func family() -> Image {
-        return Image("Family")
+    static func x() -> Image {
+        return Image("X")
     }
     
-    static func settings() -> Image {
-        return Image("Settings")
-    }
-    
-    static func liner() -> Image {
-        return Image("Liner")
+    static func xCircle() -> Image {
+        return Image("X-circle")
     }
 }

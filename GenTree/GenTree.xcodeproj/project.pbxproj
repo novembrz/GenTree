@@ -27,6 +27,10 @@
 		87331AFA29A7EE08003CF83B /* FamilyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF929A7EE08003CF83B /* FamilyCardView.swift */; };
 		87331AFD29A7EE4D003CF83B /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFC29A7EE4D003CF83B /* PersonModel.swift */; };
 		87331AFF29A7F886003CF83B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFE29A7F886003CF83B /* Constant.swift */; };
+		8752E5BB29A928E400185B98 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BA29A928E400185B98 /* SettingsViewModel.swift */; };
+		8752E5BF29A92F9D00185B98 /* FieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BE29A92F9D00185B98 /* FieldButton.swift */; };
+		87B5E54B29ABADC800A756CE /* UIScreen + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */; };
+		87B5E54D29ABB5FE00A756CE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5E54C29ABB5FE00A756CE /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		87331AF929A7EE08003CF83B /* FamilyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyCardView.swift; sourceTree = "<group>"; };
 		87331AFC29A7EE4D003CF83B /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		87331AFE29A7F886003CF83B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		8752E5BA29A928E400185B98 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		8752E5BE29A92F9D00185B98 /* FieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldButton.swift; sourceTree = "<group>"; };
+		87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen + Extension.swift"; sourceTree = "<group>"; };
+		87B5E54C29ABB5FE00A756CE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,7 @@
 				87331ADD29A7E139003CF83B /* Color + Extension.swift */,
 				87331ADB29A7E131003CF83B /* Font + Extension.swift */,
 				87331ADF29A7E144003CF83B /* Image + Extension.swift */,
+				87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */,
 				87331AFE29A7F886003CF83B /* Constant.swift */,
 			);
 			path = Extensions;
@@ -129,10 +138,11 @@
 		87331AEE29A7E3A0003CF83B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8752E5BD29A92F7D00185B98 /* Common */,
 				87331AF529A7EA84003CF83B /* Main */,
 				87331AD829A7E109003CF83B /* TreeView.swift */,
 				87331AF629A7ED54003CF83B /* Family */,
-				87331AEC29A7E398003CF83B /* SettingsView.swift */,
+				8752E5BC29A9291100185B98 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +173,24 @@
 				87331AFC29A7EE4D003CF83B /* PersonModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8752E5BC29A9291100185B98 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				87331AEC29A7E398003CF83B /* SettingsView.swift */,
+				8752E5BA29A928E400185B98 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8752E5BD29A92F7D00185B98 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8752E5BE29A92F9D00185B98 /* FieldButton.swift */,
+				87B5E54C29ABB5FE00A756CE /* SearchView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +272,16 @@
 				87331AF229A7E7F3003CF83B /* MainView.swift in Sources */,
 				87331AFA29A7EE08003CF83B /* FamilyCardView.swift in Sources */,
 				87331AD929A7E109003CF83B /* TreeView.swift in Sources */,
+				8752E5BB29A928E400185B98 /* SettingsViewModel.swift in Sources */,
+				87B5E54B29ABADC800A756CE /* UIScreen + Extension.swift in Sources */,
 				87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */,
 				87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */,
 				87331AFF29A7F886003CF83B /* Constant.swift in Sources */,
+				87B5E54D29ABB5FE00A756CE /* SearchView.swift in Sources */,
 				87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */,
 				87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */,
 				87331AF829A7ED60003CF83B /* FamilyViewModel.swift in Sources */,
+				8752E5BF29A92F9D00185B98 /* FieldButton.swift in Sources */,
 				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
 				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
 				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,

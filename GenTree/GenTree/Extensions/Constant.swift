@@ -7,8 +7,9 @@
 
 import Foundation
 
-extension CGFloat {
-    struct Constants {
-        static let horizontal: CGFloat = 16
-    }
+struct Constants {
+    static let horizontalInset: CGFloat = 16
+    static let tabBarHeight: CGFloat = 60
+    static let bottomInset: CGFloat = tabBarHeight + 20
 }
+

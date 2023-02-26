@@ -19,12 +19,12 @@ struct FamilyCardView: View {
                 .frame(height: height())
                 .cornerRadius(.cornerRadius)
             
-            Image("Liner2")
+            Image.liner()
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(.cornerRadius)
             
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: .spacing) {
                 Text(person.fullname)
                     .font(.bold(.nameFontSize))
                     .foregroundColor(.white)
@@ -39,7 +39,7 @@ struct FamilyCardView: View {
     }
     
     func height() -> CGFloat {
-        let width = UIScreen.main.bounds.size.width/2 - .Constants.horizontal*2 - 11
+        let width = UIScreen.width/2 - Constants.horizontalInset*2 - 11
         return width * 1.45
     }
 }
@@ -52,6 +52,7 @@ private extension CGFloat {
     static let dateFontSize: CGFloat = 12
     static let horizontal: CGFloat = 9
     static let bottom: CGFloat = 14
+    static let spacing: CGFloat = 5
 }
 
 //MARK: - Previews

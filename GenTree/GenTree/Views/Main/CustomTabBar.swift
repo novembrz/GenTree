@@ -38,8 +38,8 @@ struct CustomTabBar: View {
                     Spacer()
                 }
             }
-            .frame(width: nil, height: .viewHeight)
-            .background(.thinMaterial)
+            .frame(width: nil, height: Constants.tabBarHeight)
+            .background(Color.element())
             .cornerRadius(.cornerRadius)
             .padding(.horizontal, .horizontal)
         }
@@ -53,7 +53,6 @@ private extension CGFloat {
     static let cornerRadius: CGFloat = 10
     static let scaleTabEffect: CGFloat = 1.25
     static let scaleEffect: CGFloat = 1.0
-    static let viewHeight: CGFloat = 60
     static let horizontal: CGFloat = 30
 }
 
