@@ -9,35 +9,24 @@ import SwiftUI
 
 extension SettingsView {
     
-    enum SettingsItem {
-        case settings, editProfile, sinchronizeTrees
+    struct SettingsItem: Hashable {
+        let title: String
+        let icon: String
+        var color: Color? = .text()
     }
     
     @MainActor class SettingsViewModel: ObservableObject {
         
-        var fields: [SettingsItem] = [.settings, .editProfile, .sinchronizeTrees, .sinchronizeTrees]
+        var settingsFields: [SettingsItem] = [
+            SettingsItem(title: "Настройки", icon: "Settings"),
+            SettingsItem(title: "Редактировать профиль", icon: "Pen"),
+            SettingsItem(title: "Синхронизировать деревья", icon: "Tree")
+        ]
         
-        func title(field: SettingsItem) -> String {
-            switch field {
-            case .settings:
-                return "Настройки"
-            case .editProfile:
-                return "Редактировать профиль"
-            case .sinchronizeTrees:
-                return "Синхронизировать деревья"
-            }
-        }
-        
-        func icon(field: SettingsItem) -> Image {
-            switch field {
-            case .settings:
-                return .settings()
-            case .editProfile:
-                return .pen()
-            case .sinchronizeTrees:
-                return .tree()
-            }
-        }
+        var footerFields: [SettingsItem] = [
+            SettingsItem(title: "Выйти", icon: "LogOut"),
+            SettingsItem(title: "Удалить аккаунт", icon: "XCircle", color: .dangerous())
+        ]
         
         func logOut() {}
     }

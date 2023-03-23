@@ -51,7 +51,7 @@ struct MainView: View {
     private func CurrentView() -> some View {
         switch viewModel.selectedTab {
         case .tree:
-            TreeView()
+            PersonView()
         case .family:
             FamilyView()
         case .settings:

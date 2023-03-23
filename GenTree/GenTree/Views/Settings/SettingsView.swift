@@ -12,36 +12,44 @@ struct SettingsView: View {
     @StateObject var viewModel = SettingsViewModel()
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: .spacing) {
-                VStack(spacing: .elementSpacing) {
-                    Circle()
-                        .frame(width: .imageSize)
-                        .padding(.top, .topPadding)
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: .spacing) {
+                    VStack(spacing: .elementSpacing) {
+                        Circle()
+                            .frame(width: .imageSize)
+                            .padding(.top, .topPadding)
+                        
+                        Text("Курилова Д. К.")
+                            .font(.bold(.titleFontSize))
+                    }
                     
-                    Text("Курилова Д. К.")
-                        .font(.bold(.titleFontSize))
-                }
-                
-                VStack(spacing: .elementSpacing) {
-                    ForEach(viewModel.fields, id: \.self) { item in
-                        FieldButton(
-                            title: viewModel.title(field: item),
-                            icon: viewModel.icon(field: item)
-                        )
+                    VStack(spacing: .elementSpacing) {
+                        ForEach(viewModel.settingsFields, id: \.self) { item in
+                            FieldButton(
+                                title: item.title,
+                                icon: .getImage(item.icon)
+                            )
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    VStack(spacing: .elementSpacing) {
+                        ForEach(viewModel.footerFields, id: \.self) { item in
+                            FieldButton(
+                                title: item.title,
+                                icon: .getImage(item.icon),
+                                color: item.color
+                            )
+                        }
                     }
                 }
-                
-                Spacer()
-                
-                VStack(spacing: .elementSpacing) {
-                    FieldButton(title: .logOut, icon: .logOut())
-                    FieldButton(title: .deleteAccount, icon: .xCircle(), color: .dangerous())
-                }
+                .padding(.horizontal, Constants.horizontalInset)
+                .padding(.bottom, Constants.bottomInset)
             }
-            .padding(.horizontal, Constants.horizontalInset)
+            .background(Color.background())
         }
-        .background(Color.background())
     }
 }
 
@@ -56,8 +64,8 @@ private extension CGFloat {
 }
 
 private extension String {
-    static let logOut = "Выйти"
-    static let deleteAccount = "Удалить аккаунт"
+//    static let logOut = "Выйти"
+//    static let deleteAccount = "Удалить аккаунт"
 }
 
 //MARK: - Previews
