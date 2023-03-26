@@ -44,14 +44,6 @@ struct FamilyView: View {
         .background(Color.background())
         .onAppear(perform: viewModel.animateViews)
     }
-    
-    func aaa() -> Int {
-        if viewModel.family.count > 8 {
-           return 8
-        } else {
-            return viewModel.family.count
-        }
-    }
 }
 
 //MARK: - Extension

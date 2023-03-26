@@ -65,7 +65,7 @@ struct PersonView: View {
     var titleView: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Курилова Дарья Кирилловна")
-                .font(.semiBold(23))
+                .semiBold(23)
                 .foregroundColor(.text())
                 .padding(.trailing, 40)
             
@@ -90,11 +90,11 @@ struct PersonView: View {
     private func Place(title: String, place: String) -> some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title)
-                .font(.regular(14))
+                .regular(14)
                 .foregroundColor(.text())
             
             Text(place)
-                .font(.semiBold(15))
+                .semiBold(15)
                 .foregroundColor(.text())
                 .lineLimit(2)
         }
@@ -124,7 +124,7 @@ struct PersonView: View {
             
             HStack {
                 Text("4:34")
-                    .font(.regular(14))
+                    .regular(14)
                     .foregroundColor(.text())
                 
                 RoundedRectangle(cornerRadius: 20)
@@ -247,7 +247,7 @@ struct PersonView: View {
                 .cornerRadius(7)
             
             Text(title)
-                .font(.bold(14))
+                .bold(14)
                 .foregroundColor(.white)
                 .frame(width: UIScreen.width / 3 * 2, alignment: .leading)
                 .padding(12)
@@ -288,11 +288,11 @@ struct PersonView: View {
             
             VStack(spacing: 0) {
                 Text(title)
-                    .font(.semiBold(14))
+                    .semiBold(14)
                     .foregroundColor(.text())
                 
                 Text(title)
-                    .font(.regular(12))
+                    .regular(12)
                     .foregroundColor(.text())
             }
             
