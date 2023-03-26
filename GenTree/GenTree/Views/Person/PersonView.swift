@@ -12,11 +12,14 @@ struct PersonView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            avatarView
-            infoView
+            VStack {
+                avatarView
+                infoView
+            }
         }
         .edgesIgnoringSafeArea(.top)
         .background(Color.background())
+        .onAppear(perform: viewModel.animateViews)
     }
     
     //MARK: - avatarView
@@ -36,20 +39,25 @@ struct PersonView: View {
     //MARK: - infoView
     
     var infoView: some View {
-        VStack(alignment: .leading, spacing: 30) {
-            titleView
-            placesView
-            descriptionView
-            voiceView
-            galleryView
-            biographyView
+        VStack(spacing: 30) {
+            VStack(alignment: .leading, spacing: 30) {
+                titleView
+                placesView
+                descriptionView
+                voiceView
+                galleryView
+                biographyView
+                lifeStoriesView
+            }
+            .padding(.top, 22)
+            .padding(.horizontal, Constants.horizontalInset)
+            .background(Color.background())
+            .cornerRadius(25)
+            
+            nextOfKinView
         }
-        .padding(.top, 22)
-        .padding(.horizontal, Constants.horizontalInset)
-        .padding(.bottom, 180)
-        .background(Color.background())
-        .cornerRadius(25)
         .offset(y: 100)
+        .padding(.bottom, 180)
     }
     
     //MARK: - titleView
@@ -62,9 +70,10 @@ struct PersonView: View {
                 .padding(.trailing, 40)
             
             Text("2 Ноября 1999 - 23 Ноября 2087")
-                .font(.semiBold(14))
+                .semiBold(14)
                 .foregroundColor(.accent())
         }
+        .animatingElement(viewModel.showViews[1], value: .oddValue)
     }
     
     //MARK: - placesView
@@ -74,6 +83,7 @@ struct PersonView: View {
             Place(title: .cityOfBirth, place: "д. Илькино, Владимирская область")
             Place(title: .cityOfResidence, place: "г. Москва")
         }
+        .animatingElement(viewModel.showViews[2], value: .evenValue)
     }
     
     @ViewBuilder
@@ -100,6 +110,7 @@ struct PersonView: View {
             BigTextBlock("Белорусский метатель молота, чемпион мира, призёр Олимпийских игр и чемпионата Европы. Заслуженный мастер спорта Республики Беларусь. Выступал за «Динамо».  Европы. Заслуженный мастер спорта Республики Беларусь. Выступал за «Динамо».")
         }
         .padding(.top, 10)
+        .animatingElement(viewModel.showViews[3], value: .oddValue)
     }
     
     //MARK: - voiceView
@@ -129,6 +140,7 @@ struct PersonView: View {
                 }
             }
         }
+        .animatingElement(viewModel.showViews[4], value: .evenValue)
     }
     
     //MARK: - galleryView
@@ -174,7 +186,7 @@ struct PersonView: View {
 
     var biographyView: some View {
         VStack(spacing: 22) {
-            TitleView(title: .biographyView,
+            TitleView(title: .biographyTitle,
                       buttonTitle: .allTitle,
                       action: viewModel.defols,
                       itemsCount: viewModel.galleryItems.count)
@@ -191,6 +203,105 @@ struct PersonView: View {
             }
         }
     }
+    
+    //MARK: - lifeStoriesView
+
+    var lifeStoriesView: some View {
+        VStack(spacing: 17) {
+            TitleView(title: .lifeStoriesTitle,
+                      buttonTitle: .allTitle,
+                      action: viewModel.defols,
+                      itemsCount: viewModel.galleryItems.count)
+            
+            VStack {
+                if viewModel.biographyItems.count > 1 {
+                    ForEach(viewModel.biographyItems[0...1], id: \.self) { story in
+                        StoryView(
+                            title: story.title,
+                            image: .getImage("avatar")
+                        )
+                    }
+                } else {
+                    StoryView(
+                        title: viewModel.biographyItems[0].title,
+                        image: .getImage("avatar")
+                    )
+                }
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func StoryView(title: String, image: Image) -> some View {
+        ZStack(alignment: .bottomLeading) {
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 86)
+                .cornerRadius(7)
+            
+            Image.liner()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 86)
+                .cornerRadius(7)
+            
+            Text(title)
+                .font(.bold(14))
+                .foregroundColor(.white)
+                .frame(width: UIScreen.width / 3 * 2, alignment: .leading)
+                .padding(12)
+        }
+    }
+    
+    //MARK: - nextOfKinView
+
+    var nextOfKinView: some View {
+        VStack(spacing: 11) {
+            TitleView(title: .nextOfKinTitle)
+                .padding(.horizontal, Constants.horizontalInset)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(viewModel.kinItems, id: \.self) { person in
+                        KinView(
+                            title: person.fullname,
+                            image: .getImage(person.avatarUrl),
+                            role: person.relationship
+                        )
+                    }
+
+                }
+                .padding(.horizontal, Constants.horizontalInset)
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func KinView(title: String, image: Image, role: String) -> some View {
+        VStack(spacing: 6) {
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 50)
+                .clipShape(Circle())
+            
+            VStack(spacing: 0) {
+                Text(title)
+                    .font(.semiBold(14))
+                    .foregroundColor(.text())
+                
+                Text(title)
+                    .font(.regular(12))
+                    .foregroundColor(.text())
+            }
+            
+        }
+        .padding(13)
+        .frame(width: 140, height: 106)
+        .background(Color.element())
+        .cornerRadius(5)
+    }
 }
 
 //MARK: - Extensions
@@ -203,11 +314,14 @@ private extension String {
     static let descriptionTitle = "Описание"
     static let voiceTitle = "Голос предка"
     static let galleryTitle = "Галерея"
-    static let biographyView = "Биография"
+    static let biographyTitle = "Биография"
+    static let lifeStoriesTitle = "Истории из жизни"
+    static let nextOfKinTitle = "Ближайшие родственники"
 }
 
 private extension CGFloat {
-    
+    static let evenValue: CGFloat = 100
+    static let oddValue: CGFloat = 150
 }
 
 //MARK: - Previews

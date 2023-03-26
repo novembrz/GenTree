@@ -17,6 +17,8 @@ extension SettingsView {
     
     @MainActor class SettingsViewModel: ObservableObject {
         
+        @Published var showViews: [Bool] = Array(repeating: false, count: 4)
+        
         var settingsFields: [SettingsItem] = [
             SettingsItem(title: "Настройки", icon: "Settings"),
             SettingsItem(title: "Редактировать профиль", icon: "Pen"),
@@ -29,5 +31,25 @@ extension SettingsView {
         ]
         
         func logOut() {}
+        
+        //MARK: - Animate
+        
+        func animateViews() {
+            withAnimation(.easeInOut) {
+                showViews[0] = true
+            }
+            
+            withAnimation(.easeInOut.delay(0.1)) {
+                showViews[1] = true
+            }
+            
+            withAnimation(.easeInOut.delay(0.15)) {
+                showViews[2] = true
+            }
+            
+            withAnimation(.easeInOut.delay(0.2)) {
+                showViews[3] = true
+            }
+        }
     }
 }

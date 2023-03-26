@@ -27,11 +27,14 @@
 		87331AED29A7E398003CF83B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEC29A7E398003CF83B /* SettingsView.swift */; };
 		87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AEF29A7E556003CF83B /* CustomTabBar.swift */; };
 		87331AF229A7E7F3003CF83B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF129A7E7F3003CF83B /* MainView.swift */; };
-		87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF329A7E808003CF83B /* MainViewModel.swift */; };
 		87331AF829A7ED60003CF83B /* FamilyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF729A7ED60003CF83B /* FamilyViewModel.swift */; };
 		87331AFA29A7EE08003CF83B /* FamilyCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AF929A7EE08003CF83B /* FamilyCardView.swift */; };
 		87331AFD29A7EE4D003CF83B /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFC29A7EE4D003CF83B /* PersonModel.swift */; };
 		87331AFF29A7F886003CF83B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87331AFE29A7F886003CF83B /* Constant.swift */; };
+		873BA80629D0ACBB004EF474 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80529D0ACBB004EF474 /* AuthView.swift */; };
+		873BA80829D0B13C004EF474 /* LinearGradient + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80729D0B13C004EF474 /* LinearGradient + Extension.swift */; };
+		873BA80B29D0B313004EF474 /* ThemedFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80A29D0B313004EF474 /* ThemedFont.swift */; };
+		873BA80D29D0B3BB004EF474 /* AnimatedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80C29D0B3BB004EF474 /* AnimatedElement.swift */; };
 		8752E5BB29A928E400185B98 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BA29A928E400185B98 /* SettingsViewModel.swift */; };
 		8752E5BF29A92F9D00185B98 /* FieldButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BE29A92F9D00185B98 /* FieldButton.swift */; };
 		87B5E54B29ABADC800A756CE /* UIScreen + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */; };
@@ -63,11 +66,14 @@
 		87331AEC29A7E398003CF83B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		87331AEF29A7E556003CF83B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		87331AF129A7E7F3003CF83B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		87331AF329A7E808003CF83B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		87331AF729A7ED60003CF83B /* FamilyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyViewModel.swift; sourceTree = "<group>"; };
 		87331AF929A7EE08003CF83B /* FamilyCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyCardView.swift; sourceTree = "<group>"; };
 		87331AFC29A7EE4D003CF83B /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		87331AFE29A7F886003CF83B /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		873BA80529D0ACBB004EF474 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		873BA80729D0B13C004EF474 /* LinearGradient + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient + Extension.swift"; sourceTree = "<group>"; };
+		873BA80A29D0B313004EF474 /* ThemedFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedFont.swift; sourceTree = "<group>"; };
+		873BA80C29D0B3BB004EF474 /* AnimatedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedElement.swift; sourceTree = "<group>"; };
 		8752E5BA29A928E400185B98 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8752E5BE29A92F9D00185B98 /* FieldButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldButton.swift; sourceTree = "<group>"; };
 		87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen + Extension.swift"; sourceTree = "<group>"; };
@@ -128,7 +134,9 @@
 		87331ADA29A7E11E003CF83B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				873BA80929D0B2FD004EF474 /* Modifiers */,
 				87331ADD29A7E139003CF83B /* Color + Extension.swift */,
+				873BA80729D0B13C004EF474 /* LinearGradient + Extension.swift */,
 				87331ADB29A7E131003CF83B /* Font + Extension.swift */,
 				87331ADF29A7E144003CF83B /* Image + Extension.swift */,
 				87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */,
@@ -152,12 +160,13 @@
 		87331AEE29A7E3A0003CF83B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8752E5BD29A92F7D00185B98 /* Common */,
+				873BA80429D0AC91004EF474 /* Auth */,
 				87331AF529A7EA84003CF83B /* Main */,
-				87331AD829A7E109003CF83B /* TreeView.swift */,
+				873BA80329D0AC7E004EF474 /* Tree */,
 				87331AF629A7ED54003CF83B /* Family */,
 				87B5E54E29ABC1E700A756CE /* Person */,
 				8752E5BC29A9291100185B98 /* Settings */,
+				8752E5BD29A92F7D00185B98 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				87331AF129A7E7F3003CF83B /* MainView.swift */,
-				87331AF329A7E808003CF83B /* MainViewModel.swift */,
 				87331AEF29A7E556003CF83B /* CustomTabBar.swift */,
 			);
 			path = Main;
@@ -189,6 +197,31 @@
 				872FB21B29CC4D34003A2349 /* BiographyModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		873BA80329D0AC7E004EF474 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				87331AD829A7E109003CF83B /* TreeView.swift */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
+		873BA80429D0AC91004EF474 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				873BA80529D0ACBB004EF474 /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		873BA80929D0B2FD004EF474 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				873BA80C29D0B3BB004EF474 /* AnimatedElement.swift */,
+				873BA80A29D0B313004EF474 /* ThemedFont.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		8752E5BC29A9291100185B98 /* Settings */ = {
@@ -311,15 +344,18 @@
 				87B5E54D29ABB5FE00A756CE /* SearchView.swift in Sources */,
 				8732148C29AF63D3008C1A75 /* BigTextBlock.swift in Sources */,
 				87B5E55229ABC1FE00A756CE /* PersonViewModel.swift in Sources */,
-				87331AF429A7E808003CF83B /* MainViewModel.swift in Sources */,
 				872FB12029CC476A003A2349 /* SmallViewWithIcon.swift in Sources */,
+				873BA80629D0ACBB004EF474 /* AuthView.swift in Sources */,
 				87331AF029A7E556003CF83B /* CustomTabBar.swift in Sources */,
 				87331AF829A7ED60003CF83B /* FamilyViewModel.swift in Sources */,
 				8752E5BF29A92F9D00185B98 /* FieldButton.swift in Sources */,
+				873BA80829D0B13C004EF474 /* LinearGradient + Extension.swift in Sources */,
 				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
 				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
 				8732148E29AF7108008C1A75 /* TitleView.swift in Sources */,
 				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,
+				873BA80D29D0B3BB004EF474 /* AnimatedElement.swift in Sources */,
+				873BA80B29D0B313004EF474 /* ThemedFont.swift in Sources */,
 				87B5E55029ABC1F400A756CE /* PersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

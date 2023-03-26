@@ -16,6 +16,7 @@ struct FamilyView: View {
                 LazyVGrid(columns: viewModel.columns, spacing: .gridSpacing) {
                     ForEach(viewModel.family, id: \.self) { person in
                         FamilyCardView(person: person)
+                            .animatingElement(viewModel.showViews[1], value: .evenValue)
                     }
                 }
                 .padding(.top, .topPadding)
@@ -32,13 +33,24 @@ struct FamilyView: View {
                         .frame(height: .imageHeight)
                         .padding(.horizontal, .imageHorizontal)
                         .padding(.vertical, .imageVertical)
+                        .foregroundColor(.white)
                         .background(Color.accentColor)
                         .cornerRadius(.radius)
                 }
             }
+            .animatingElement(viewModel.showViews[0], value: .evenValue)
         }
         .padding(.horizontal, Constants.horizontalInset)
         .background(Color.background())
+        .onAppear(perform: viewModel.animateViews)
+    }
+    
+    func aaa() -> Int {
+        if viewModel.family.count > 8 {
+           return 8
+        } else {
+            return viewModel.family.count
+        }
     }
 }
 
@@ -53,6 +65,9 @@ private extension CGFloat {
     static let imageVertical: CGFloat = 15
     static let imageHeight: CGFloat = 18
     static let radius: CGFloat = 8
+    
+    static let evenValue: CGFloat = 100
+    static let oddValue: CGFloat = 150
 }
 
 //MARK: - Previews

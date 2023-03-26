@@ -10,6 +10,6 @@ import Foundation
 struct PersonModel: Decodable, Hashable {
     let avatarUrl: String
     let fullname: String //  будет потом пофамильно, разбей на 3
-    let relationship: String
+    let relationship: String //role
     let birthDay: String
 }

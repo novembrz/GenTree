@@ -21,6 +21,14 @@ extension Color {
         return Color("ElementColor")
     }
     
+    static func greenColor() -> Color {
+        return Color("GreenColor")
+    }
+
+    static func lightGreenColor() -> Color {
+        return Color("LightGreenColor")
+    }
+    
     static func text() -> Color {
         return Color("TextColor")
     }

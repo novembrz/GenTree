@@ -21,8 +21,8 @@ struct FieldButton: View {
                 .foregroundColor(color)
             
             Text(title)
+                .medium(.textSize)
                 .foregroundColor(color)
-                .font(.medium(.textSize))
             
             Spacer()
         }

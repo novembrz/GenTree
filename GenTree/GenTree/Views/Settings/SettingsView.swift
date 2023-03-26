@@ -16,12 +16,19 @@ struct SettingsView: View {
             ScrollView {
                 VStack(spacing: .spacing) {
                     VStack(spacing: .elementSpacing) {
-                        Circle()
-                            .frame(width: .imageSize)
+                        Image("avatar")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: .imageSize, height: .imageSize)
+                            .clipShape(Circle())
                             .padding(.top, .topPadding)
+                            .opacity(viewModel.showViews[0] ? 1 : 0)
+                            .rotationEffect(.degrees(viewModel.showViews[0] ? 0 : .degrees))
                         
                         Text("Курилова Д. К.")
-                            .font(.bold(.titleFontSize))
+                            .bold(.titleFontSize)
+                            .foregroundColor(.text())
+                            .animatingElement(viewModel.showViews[1], value: .oddValue)
                     }
                     
                     VStack(spacing: .elementSpacing) {
@@ -32,6 +39,7 @@ struct SettingsView: View {
                             )
                         }
                     }
+                    .animatingElement(viewModel.showViews[2], value: .evenValue)
                     
                     Spacer()
                     
@@ -44,11 +52,13 @@ struct SettingsView: View {
                             )
                         }
                     }
+                    .animatingElement(viewModel.showViews[3], value: .oddValue)
                 }
                 .padding(.horizontal, Constants.horizontalInset)
                 .padding(.bottom, Constants.bottomInset)
             }
             .background(Color.background())
+            .onAppear(perform: viewModel.animateViews)
         }
     }
 }
@@ -61,11 +71,13 @@ private extension CGFloat {
     static let imageSize: CGFloat = 115
     static let topPadding: CGFloat = 22
     static let titleFontSize: CGFloat = 24
+    
+    static let evenValue: CGFloat = 100
+    static let oddValue: CGFloat = 150
 }
 
-private extension String {
-//    static let logOut = "Выйти"
-//    static let deleteAccount = "Удалить аккаунт"
+private extension Double {
+    static let degrees: Double = 90
 }
 
 //MARK: - Previews

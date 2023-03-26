@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MainView: View {
 
-    @StateObject var viewModel = MainViewModel()
     @GestureState var gestureOffset: CGFloat = 0
+    @State var selectedTab: Tab = .tree
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -29,10 +29,10 @@ struct MainView: View {
     var tabBar: some View {
         ZStack {
             VStack {
-                TabView(selection: $viewModel.selectedTab) {
+                TabView(selection: $selectedTab) {
                     ForEach(Tab.allCases, id: \.rawValue) { tab in
                         CurrentView()
-                            .animation(nil, value: viewModel.selectedTab)
+                            .animation(nil, value: selectedTab)
                             .tag(tab)
                     }
                 }
@@ -40,7 +40,7 @@ struct MainView: View {
 
             VStack {
                 Spacer()
-                CustomTabBar(selectedTab: $viewModel.selectedTab)
+                CustomTabBar(selectedTab: $selectedTab)
             }
         }
     }
@@ -49,9 +49,9 @@ struct MainView: View {
 
     @ViewBuilder
     private func CurrentView() -> some View {
-        switch viewModel.selectedTab {
+        switch selectedTab {
         case .tree:
-            PersonView()
+            TreeView()
         case .family:
             FamilyView()
         case .settings:
