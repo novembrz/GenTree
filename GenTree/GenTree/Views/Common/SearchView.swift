@@ -11,20 +11,33 @@ struct SearchView: View {
     @Binding var searchText: String
     
     var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: .spacing) {
             Image.search()
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 14)
+                .frame(width: .width)
                 .foregroundColor(.secondText())
             
-            TextField("Найти", text: $searchText)
+            TextField(String.placeholder, text: $searchText)
                 .foregroundColor(.text())
         }
-        .padding(14)
+        .padding(.padding)
         .background(Color.element())
-        .cornerRadius(10)
+        .cornerRadius(.cornerRadius)
     }
+}
+
+//MARK: - Extension
+
+private extension String {
+    static let placeholder = "Найти"
+}
+
+private extension CGFloat {
+    static let spacing: CGFloat = 10
+    static let width: CGFloat = 14
+    static let padding: CGFloat = 14
+    static let cornerRadius: CGFloat = 10
 }
 
 //MARK: - Previews

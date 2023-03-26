@@ -33,7 +33,7 @@ struct SettingsView: View {
                     
                     VStack(spacing: .elementSpacing) {
                         ForEach(viewModel.settingsFields, id: \.self) { item in
-                            FieldButton(
+                            ListButton(
                                 title: item.title,
                                 icon: .getImage(item.icon)
                             )
@@ -45,7 +45,7 @@ struct SettingsView: View {
                     
                     VStack(spacing: .elementSpacing) {
                         ForEach(viewModel.footerFields, id: \.self) { item in
-                            FieldButton(
+                            ListButton(
                                 title: item.title,
                                 icon: .getImage(item.icon),
                                 color: item.color

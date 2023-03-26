@@ -9,6 +9,21 @@ import SwiftUI
 
 extension Image {
     
+    struct Logo {
+        
+        static func apple() -> Image {
+            return Image("appleLogo")
+        }
+        
+        static func google() -> Image {
+            return Image("googleLogo")
+        }
+        
+        static func vk() -> Image {
+            return Image("vkLogo")
+        }
+    }
+    
     static func getImage(_ name: String) -> Image {
         return Image(name)
     }
@@ -29,6 +44,10 @@ extension Image {
         return Image("Gift")
     }
 
+    static func key() -> Image {
+        return Image("Key")
+    }
+
     static func genTreeLogo() -> Image {
         return Image("GenTreeLogo")
     }
@@ -39,6 +58,10 @@ extension Image {
 
     static func logOut() -> Image {
         return Image("LogOut")
+    }
+
+    static func mail() -> Image {
+        return Image("Mail")
     }
 
     static func pen() -> Image {
@@ -67,6 +90,10 @@ extension Image {
 
     static func tree() -> Image {
         return Image("Tree")
+    }
+
+    static func user() -> Image {
+        return Image("User")
     }
 
     static func x() -> Image {

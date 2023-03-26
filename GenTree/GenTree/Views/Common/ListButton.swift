@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FieldButton: View {
+struct ListButton: View {
     let title: String
     let icon: Image
     var color: Color? = .text()

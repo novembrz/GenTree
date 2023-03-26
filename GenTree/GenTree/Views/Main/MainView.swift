@@ -11,6 +11,8 @@ struct MainView: View {
 
     @GestureState var gestureOffset: CGFloat = 0
     @State var selectedTab: Tab = .tree
+    
+    @State var isLogOut = true
 
     init() {
         UITabBar.appearance().isHidden = true
@@ -42,6 +44,9 @@ struct MainView: View {
                 Spacer()
                 CustomTabBar(selectedTab: $selectedTab)
             }
+        }
+        .fullScreenCover(isPresented: $isLogOut) {
+            AuthView()
         }
     }
 
