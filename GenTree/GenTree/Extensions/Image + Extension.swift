@@ -32,6 +32,10 @@ extension Image {
         return Image("Briefcase")
     }
 
+    static func check() -> Image {
+        return Image("Check")
+    }
+
     static func family() -> Image {
         return Image("Family")
     }

@@ -9,11 +9,13 @@ import SwiftUI
 
 struct TreeView: View {
     var body: some View {
-        VStack {
-            Text("Hello, World!")
-                .font(.medium(40))
+        CustomNavigationView {
+            VStack {
+                Text("Hello, World!")
+                    .font(.medium(40))
+            }
+            .background(Color.background())
         }
-        .background(Color.background())
     }
 }
 

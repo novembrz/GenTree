@@ -15,51 +15,93 @@ struct SettingsView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: .spacing) {
-                    VStack(spacing: .elementSpacing) {
-                        Image("avatar")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: .imageSize, height: .imageSize)
-                            .clipShape(Circle())
-                            .padding(.top, .topPadding)
-                            .opacity(viewModel.showViews[0] ? 1 : 0)
-                            .rotationEffect(.degrees(viewModel.showViews[0] ? 0 : .degrees))
-                        
-                        Text("Курилова Д. К.")
-                            .bold(.titleFontSize)
-                            .foregroundColor(.text())
-                            .animatingElement(viewModel.showViews[1], value: .oddValue)
-                    }
+                    profileView
                     
-                    VStack(spacing: .elementSpacing) {
-                        ForEach(viewModel.settingsFields, id: \.self) { item in
-                            ListButton(
-                                title: item.title,
-                                icon: .getImage(item.icon)
-                            )
-                        }
+                    VStack(spacing: .settingsSpacing) {
+                        settingsView
+                        treeView
+                        logOutView
                     }
-                    .animatingElement(viewModel.showViews[2], value: .evenValue)
-                    
-                    Spacer()
-                    
-                    VStack(spacing: .elementSpacing) {
-                        ForEach(viewModel.footerFields, id: \.self) { item in
-                            ListButton(
-                                title: item.title,
-                                icon: .getImage(item.icon),
-                                color: item.color
-                            )
-                        }
-                    }
-                    .animatingElement(viewModel.showViews[3], value: .oddValue)
                 }
                 .padding(.horizontal, Constants.horizontalInset)
                 .padding(.bottom, Constants.bottomInset)
             }
+            .padding(.bottom, Constants.bottomInset)
             .background(Color.background())
             .onAppear(perform: viewModel.animateViews)
         }
+    }
+    
+    //MARK: - profileView
+    
+    var profileView: some View {
+        VStack(spacing: .elementSpacing) {
+            Image("avatar")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: .imageSize, height: .imageSize)
+                .clipShape(Circle())
+                .padding(.top, .topPadding)
+                .opacity(viewModel.showViews[0] ? 1 : 0)
+                .rotationEffect(.degrees(viewModel.showViews[0] ? 0 : .degrees))
+            
+            Text("Курилова Д. К.")
+                .bold(.titleFontSize)
+                .foregroundColor(.text())
+                .animatingElement(viewModel.showViews[1], value: .oddValue)
+        }
+    }
+    
+    //MARK: - settingsView
+    
+    var settingsView: some View {
+        CustomNavigationLink {
+            VStack(spacing: .elementSpacing) {
+                ForEach(viewModel.settingsFields, id: \.self) { item in
+                    ListButton(
+                        title: item.title,
+                        icon: .getImage(item.icon)
+                    )
+                }
+            }
+            .animatingElement(viewModel.showViews[2], value: .evenValue)
+        } destination: {
+            PersonView()
+        }
+    }
+    
+    
+    //MARK: - settingsView
+    
+    var treeView: some View {
+        CustomNavigationLink {
+            VStack(spacing: .elementSpacing) {
+                ForEach(viewModel.treeFields, id: \.self) { item in
+                    ListButton(
+                        title: item.title,
+                        icon: .getImage(item.icon)
+                    )
+                }
+            }
+            .animatingElement(viewModel.showViews[2], value: .evenValue)
+        } destination: {
+            TreeSynchronizationView()
+        }
+    }
+    
+    //MARK: - logOutView
+    
+    var logOutView: some View {
+        VStack(spacing: .elementSpacing) {
+            ForEach(viewModel.footerFields, id: \.self) { item in
+                ListButton(
+                    title: item.title,
+                    icon: .getImage(item.icon),
+                    color: item.color
+                )
+            }
+        }
+        .animatingElement(viewModel.showViews[3], value: .oddValue)
     }
 }
 
@@ -67,7 +109,8 @@ struct SettingsView: View {
 
 private extension CGFloat {
     static let spacing: CGFloat = 48
-    static let elementSpacing: CGFloat = 16
+    static let settingsSpacing: CGFloat = 35
+    static let elementSpacing: CGFloat = 14
     static let imageSize: CGFloat = 115
     static let topPadding: CGFloat = 22
     static let titleFontSize: CGFloat = 24

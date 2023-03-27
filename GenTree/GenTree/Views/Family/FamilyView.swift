@@ -25,18 +25,7 @@ struct FamilyView: View {
             
             HStack(spacing: .searchSpacing) {
                 SearchView(searchText: $viewModel.searchText)
-                
-                Button {} label: {
-                    Image.filter()
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: .imageHeight)
-                        .padding(.horizontal, .imageHorizontal)
-                        .padding(.vertical, .imageVertical)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
-                        .cornerRadius(.radius)
-                }
+                IconButton(icon: .filter(), color: .accent()) {}
             }
             .animatingElement(viewModel.showViews[0], value: .evenValue)
         }
@@ -52,11 +41,6 @@ private extension CGFloat {
     static let topPadding: CGFloat = 70
     static let gridSpacing: CGFloat = 11
     static let searchSpacing: CGFloat = 9
-    
-    static let imageHorizontal: CGFloat = 12
-    static let imageVertical: CGFloat = 15
-    static let imageHeight: CGFloat = 18
-    static let radius: CGFloat = 8
     
     static let evenValue: CGFloat = 100
     static let oddValue: CGFloat = 150

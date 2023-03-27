@@ -19,6 +19,7 @@ struct SearchView: View {
                 .foregroundColor(.secondText())
             
             TextField(String.placeholder, text: $searchText)
+                .regular(.placeholderSize)
                 .foregroundColor(.text())
         }
         .padding(.padding)
@@ -38,6 +39,7 @@ private extension CGFloat {
     static let width: CGFloat = 14
     static let padding: CGFloat = 14
     static let cornerRadius: CGFloat = 10
+    static let placeholderSize: CGFloat = 13
 }
 
 //MARK: - Previews

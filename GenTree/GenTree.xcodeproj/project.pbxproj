@@ -37,6 +37,14 @@
 		873BA80D29D0B3BB004EF474 /* AnimatedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80C29D0B3BB004EF474 /* AnimatedElement.swift */; };
 		873BA80F29D0C519004EF474 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA80E29D0C519004EF474 /* CustomTextField.swift */; };
 		873BA81129D0C613004EF474 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA81029D0C613004EF474 /* AuthViewModel.swift */; };
+		873BA81329D187B4004EF474 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA81229D187B4004EF474 /* AuthError.swift */; };
+		873BA81629D187E5004EF474 /* AuthValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA81529D187E5004EF474 /* AuthValidators.swift */; };
+		873BA81829D189DA004EF474 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BA81729D189DA004EF474 /* ResultModel.swift */; };
+		873BABFE29D1AF0E004EF474 /* TreeSynchronizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BABFD29D1AF0E004EF474 /* TreeSynchronizationView.swift */; };
+		873BAC0029D1B22E004EF474 /* TreeSynchronizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BABFF29D1B22E004EF474 /* TreeSynchronizationViewModel.swift */; };
+		873BAC0429D1B349004EF474 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BAC0329D1B349004EF474 /* IconButton.swift */; };
+		873BAC0629D1D72C004EF474 /* CustomNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BAC0529D1D72C004EF474 /* CustomNavigationLink.swift */; };
+		873BAC0829D1D748004EF474 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BAC0729D1D748004EF474 /* CustomNavigationView.swift */; };
 		8752E5BB29A928E400185B98 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BA29A928E400185B98 /* SettingsViewModel.swift */; };
 		8752E5BF29A92F9D00185B98 /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8752E5BE29A92F9D00185B98 /* ListButton.swift */; };
 		87B5E54B29ABADC800A756CE /* UIScreen + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */; };
@@ -78,6 +86,14 @@
 		873BA80C29D0B3BB004EF474 /* AnimatedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedElement.swift; sourceTree = "<group>"; };
 		873BA80E29D0C519004EF474 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		873BA81029D0C613004EF474 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		873BA81229D187B4004EF474 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		873BA81529D187E5004EF474 /* AuthValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidators.swift; sourceTree = "<group>"; };
+		873BA81729D189DA004EF474 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		873BABFD29D1AF0E004EF474 /* TreeSynchronizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSynchronizationView.swift; sourceTree = "<group>"; };
+		873BABFF29D1B22E004EF474 /* TreeSynchronizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeSynchronizationViewModel.swift; sourceTree = "<group>"; };
+		873BAC0329D1B349004EF474 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		873BAC0529D1D72C004EF474 /* CustomNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationLink.swift; sourceTree = "<group>"; };
+		873BAC0729D1D748004EF474 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		8752E5BA29A928E400185B98 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		8752E5BE29A92F9D00185B98 /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
 		87B5E54A29ABADC800A756CE /* UIScreen + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen + Extension.swift"; sourceTree = "<group>"; };
@@ -120,6 +136,7 @@
 				87331AC929A7E0B6003CF83B /* GenTreeApp.swift */,
 				87331AFB29A7EE30003CF83B /* Models */,
 				87331AEE29A7E3A0003CF83B /* Views */,
+				873BA81429D187BC004EF474 /* Helpers */,
 				87331ADA29A7E11E003CF83B /* Extensions */,
 				87331AE929A7E359003CF83B /* Supporting files */,
 				87331ACF29A7E0B7003CF83B /* Preview Content */,
@@ -164,13 +181,13 @@
 		87331AEE29A7E3A0003CF83B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8752E5BD29A92F7D00185B98 /* Common */,
 				873BA80429D0AC91004EF474 /* Auth */,
 				87331AF529A7EA84003CF83B /* Main */,
 				873BA80329D0AC7E004EF474 /* Tree */,
 				87331AF629A7ED54003CF83B /* Family */,
 				87B5E54E29ABC1E700A756CE /* Person */,
 				8752E5BC29A9291100185B98 /* Settings */,
-				8752E5BD29A92F7D00185B98 /* Common */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +216,7 @@
 			children = (
 				87331AFC29A7EE4D003CF83B /* PersonModel.swift */,
 				872FB21B29CC4D34003A2349 /* BiographyModel.swift */,
+				873BA81729D189DA004EF474 /* ResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,11 +247,41 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		873BA81429D187BC004EF474 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				873BA81229D187B4004EF474 /* AuthError.swift */,
+				873BA81529D187E5004EF474 /* AuthValidators.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		873BAC0929D1D74B004EF474 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				873BAC0529D1D72C004EF474 /* CustomNavigationLink.swift */,
+				873BAC0729D1D748004EF474 /* CustomNavigationView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		873BAC0A29D1F743004EF474 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				8752E5BE29A92F9D00185B98 /* ListButton.swift */,
+				873BAC0329D1B349004EF474 /* IconButton.swift */,
+				872FB11F29CC476A003A2349 /* SmallViewWithIcon.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		8752E5BC29A9291100185B98 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				87331AEC29A7E398003CF83B /* SettingsView.swift */,
 				8752E5BA29A928E400185B98 /* SettingsViewModel.swift */,
+				873BABFD29D1AF0E004EF474 /* TreeSynchronizationView.swift */,
+				873BABFF29D1B22E004EF474 /* TreeSynchronizationViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -241,9 +289,9 @@
 		8752E5BD29A92F7D00185B98 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8752E5BE29A92F9D00185B98 /* ListButton.swift */,
+				873BAC0929D1D74B004EF474 /* Navigation */,
+				873BAC0A29D1F743004EF474 /* Buttons */,
 				873BA80E29D0C519004EF474 /* CustomTextField.swift */,
-				872FB11F29CC476A003A2349 /* SmallViewWithIcon.swift */,
 				87B5E54C29ABB5FE00A756CE /* SearchView.swift */,
 				8732148B29AF63D3008C1A75 /* BigTextBlock.swift */,
 				8732148D29AF7108008C1A75 /* TitleView.swift */,
@@ -335,6 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873BAC0429D1B349004EF474 /* IconButton.swift in Sources */,
+				873BA81329D187B4004EF474 /* AuthError.swift in Sources */,
 				87331AFD29A7EE4D003CF83B /* PersonModel.swift in Sources */,
 				87331AED29A7E398003CF83B /* SettingsView.swift in Sources */,
 				87331AF229A7E7F3003CF83B /* MainView.swift in Sources */,
@@ -342,12 +392,15 @@
 				87331AD929A7E109003CF83B /* TreeView.swift in Sources */,
 				873BA80F29D0C519004EF474 /* CustomTextField.swift in Sources */,
 				8752E5BB29A928E400185B98 /* SettingsViewModel.swift in Sources */,
+				873BA81829D189DA004EF474 /* ResultModel.swift in Sources */,
+				873BAC0029D1B22E004EF474 /* TreeSynchronizationViewModel.swift in Sources */,
 				872FB21A29CC4AF4003A2349 /* InfoDropDown.swift in Sources */,
 				872FB21C29CC4D34003A2349 /* BiographyModel.swift in Sources */,
 				87B5E54B29ABADC800A756CE /* UIScreen + Extension.swift in Sources */,
 				87331AE029A7E144003CF83B /* Image + Extension.swift in Sources */,
 				87331AEB29A7E385003CF83B /* FamilyView.swift in Sources */,
 				87331AFF29A7F886003CF83B /* Constant.swift in Sources */,
+				873BABFE29D1AF0E004EF474 /* TreeSynchronizationView.swift in Sources */,
 				87B5E54D29ABB5FE00A756CE /* SearchView.swift in Sources */,
 				8732148C29AF63D3008C1A75 /* BigTextBlock.swift in Sources */,
 				87B5E55229ABC1FE00A756CE /* PersonViewModel.swift in Sources */,
@@ -358,13 +411,16 @@
 				873BA81129D0C613004EF474 /* AuthViewModel.swift in Sources */,
 				8752E5BF29A92F9D00185B98 /* ListButton.swift in Sources */,
 				873BA80829D0B13C004EF474 /* LinearGradient + Extension.swift in Sources */,
+				873BAC0629D1D72C004EF474 /* CustomNavigationLink.swift in Sources */,
 				87331ADE29A7E139003CF83B /* Color + Extension.swift in Sources */,
 				87331ADC29A7E131003CF83B /* Font + Extension.swift in Sources */,
+				873BA81629D187E5004EF474 /* AuthValidators.swift in Sources */,
 				8732148E29AF7108008C1A75 /* TitleView.swift in Sources */,
 				87331ACA29A7E0B6003CF83B /* GenTreeApp.swift in Sources */,
 				873BA80D29D0B3BB004EF474 /* AnimatedElement.swift in Sources */,
 				873BA80B29D0B313004EF474 /* ThemedFont.swift in Sources */,
 				87B5E55029ABC1F400A756CE /* PersonView.swift in Sources */,
+				873BAC0829D1D748004EF474 /* CustomNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

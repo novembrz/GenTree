@@ -22,6 +22,10 @@ extension SettingsView {
         var settingsFields: [SettingsItem] = [
             SettingsItem(title: "Настройки", icon: "Settings"),
             SettingsItem(title: "Редактировать профиль", icon: "Pen"),
+        ]
+        
+        var treeFields: [SettingsItem] = [
+            SettingsItem(title: "Редактировать дерево", icon: "Tree"),
             SettingsItem(title: "Синхронизировать деревья", icon: "Tree")
         ]
         
