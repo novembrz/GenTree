@@ -28,6 +28,10 @@ extension Image {
         return Image(name)
     }
 
+    static func bell() -> Image {
+        return Image("Bell")
+    }
+
     static func briefcase() -> Image {
         return Image("Briefcase")
     }
@@ -48,6 +52,14 @@ extension Image {
         return Image("Gift")
     }
 
+    static func globe() -> Image {
+        return Image("Globe")
+    }
+
+    static func helpCircle() -> Image {
+        return Image("Help-circle")
+    }
+
     static func key() -> Image {
         return Image("Key")
     }
@@ -66,6 +78,14 @@ extension Image {
 
     static func mail() -> Image {
         return Image("Mail")
+    }
+
+    static func message() -> Image {
+        return Image("Message")
+    }
+    
+    static func moon() -> Image {
+        return Image("Moon")
     }
 
     static func pen() -> Image {

@@ -18,15 +18,16 @@ struct SettingsView: View {
                     profileView
                     
                     VStack(spacing: .settingsSpacing) {
-                        settingsView
-                        treeView
-                        logOutView
+                        ListView(viewModel.changeProfileFields, animationIndex: 2)
+                        ListView(viewModel.treeFields, animationIndex: 3)
+                        ListView(viewModel.settingsFields, animationIndex: 4)
+                        ListView(viewModel.helpFields, animationIndex: 5)
+                        ListView(viewModel.footerFields, animationIndex: 6)
                     }
                 }
                 .padding(.horizontal, Constants.horizontalInset)
                 .padding(.bottom, Constants.bottomInset)
             }
-            .padding(.bottom, Constants.bottomInset)
             .background(Color.background())
             .onAppear(perform: viewModel.animateViews)
         }
@@ -52,56 +53,24 @@ struct SettingsView: View {
         }
     }
     
-    //MARK: - settingsView
+    //MARK: - ListView
     
-    var settingsView: some View {
+    @ViewBuilder
+    func ListView(_ items: [SettingsView.SettingsItem], animationIndex: Int) -> some View {
         CustomNavigationLink {
             VStack(spacing: .elementSpacing) {
-                ForEach(viewModel.settingsFields, id: \.self) { item in
+                ForEach(items, id: \.self) { item in
                     ListButton(
                         title: item.title,
-                        icon: .getImage(item.icon)
+                        icon: .getImage(item.icon),
+                        color: item.color
                     )
                 }
             }
-            .animatingElement(viewModel.showViews[2], value: .evenValue)
-        } destination: {
-            PersonView()
-        }
-    }
-    
-    
-    //MARK: - settingsView
-    
-    var treeView: some View {
-        CustomNavigationLink {
-            VStack(spacing: .elementSpacing) {
-                ForEach(viewModel.treeFields, id: \.self) { item in
-                    ListButton(
-                        title: item.title,
-                        icon: .getImage(item.icon)
-                    )
-                }
-            }
-            .animatingElement(viewModel.showViews[2], value: .evenValue)
+            .animatingElement(viewModel.showViews[animationIndex], value: .evenValue)
         } destination: {
             TreeSynchronizationView()
         }
-    }
-    
-    //MARK: - logOutView
-    
-    var logOutView: some View {
-        VStack(spacing: .elementSpacing) {
-            ForEach(viewModel.footerFields, id: \.self) { item in
-                ListButton(
-                    title: item.title,
-                    icon: .getImage(item.icon),
-                    color: item.color
-                )
-            }
-        }
-        .animatingElement(viewModel.showViews[3], value: .oddValue)
     }
 }
 
@@ -110,7 +79,7 @@ struct SettingsView: View {
 private extension CGFloat {
     static let spacing: CGFloat = 48
     static let settingsSpacing: CGFloat = 35
-    static let elementSpacing: CGFloat = 14
+    static let elementSpacing: CGFloat = 12
     static let imageSize: CGFloat = 115
     static let topPadding: CGFloat = 22
     static let titleFontSize: CGFloat = 24
